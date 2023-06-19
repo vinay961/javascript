@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1d2026;
+    min-height: 100vh;
+    width: 100%;
+    color: #fff;
+    position: relative;
+}
+nav{
+    display: flex;
+    
+    align-items: center;
+    padding: 20px 8px;
+}
+nav .menu{
+    width: 25px;
+    margin-right: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+nav .logo{
+    width: 160px;
+    cursor: pointer;
+}
+nav ul {
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+nav ul li a:hover{
+    text-transform: uppercase;
+}
+button{
+    background-color: #efefef;
+    height: 30px;
+    width: 60px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition:  0.5s;
+}
+button span{
+    display: block;
+    background: #999;
+    height: 26px;
+    width: 26px;
+    border-radius: 50px;
+    margin-left: 2px;
+    transition:  0.5s , ;
+}
+
+.left{
+    position: absolute;
+    top: 0;
+    left: 22%;
+    width: 200px;
+}
+.lamp{
+    width: 100px;
+}
+.light{
+    position: absolute;
+    top: 97%;
+    left: -78%;
+    width: 400px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.right{
+    max-width: 600px;
+    margin-top: 7%;
+    margin-left: 50%;
+}
+.right h1{
+    font-size: 80px;
+    font-weight: 400;
+}
+.right p{
+    font-size: large;
+    margin: 10px 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.right a{
+    text-decoration: none;
+    background: #00986f;
+    padding: 14px 40px;
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+
+.control{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 150px;
+}
+.control .line{
+    width: 250px;
+    height: 4px;
+    background: #fff;
+    margin: 0px 20px;
+    border-radius: 2px;
+}
+.control .line span{
+    width: 50%;
+    height: 8px;
+    margin-top: -2px;
+
+    border-radius: 4px;
+    background: #00986f;
+}
+.active{
+    background: green;
+}
+.active span {
+    background: white;
+    margin-left: 31px;
+}
+
+.on{
+    opacity: 1;
+}
