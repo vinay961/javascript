@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web site</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        body{
+            background-color: rgb(180, 180, 224);
+        }
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .header a{
+            margin: 25px;
+            color: rgb(52, 29, 95);
+            font-size: large;
+        }
+        .header a:hover{
+            color: rgb(188, 115, 19);
+            transition: .3s;
+        }
+        .logo{
+            font-size: xx-large;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-left: -60px;
+        }
+        .mySlides{
+            position: relative;
+            left: 140px;
+            top: 50px;
+            border-radius: 15px; 
+            height: 350px;
+            
+        }
+        .sec{
+            position: relative;
+            left: 45%;
+            top: 60px;
+            font-size: x-large;
+        }
+        .para{
+            position: relative;
+            right: 40px;
+        }
+        .se{
+            display: flex;
+            
+            justify-content: space-around;
+        }
+        .se article{
+            width: 20%;
+            position: relative;
+            top: 80px;
+            border: 1px solid red;
+            color: rgb(52, 29, 95);
+            background-color: grey;
+            text-align: center;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        .se article:hover{
+            font-size: large;
+            background-color: rgb(98, 87, 87);
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section -->
+    <header class="header">
+        <h2 class="logo">Portfolio</h2>
+        <div>
+            <a href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#Services">Services</a>
+            <a href="#Contact Us">Contact Us</a>
+        </div>
+    </header>
+    <!-- Section  -->
+    <section class="section">
+        <img class="mySlides" style="width:80%" src="./portfolio1.jpg" alt="">
+        <img class="mySlides" style="width:80%" src="./portfolio2.jpg" alt="">
+        <img class="mySlides" style="width:80%" src="./portfolio3.jpg" alt="">
+        <img class="mySlides" style="width:80%" src="./portfolio5.jpg" alt="">
+        <img class="mySlides" style="width:80%" src="./portfolio4.jpg" alt="">
+    </section>
+
+    <section class="sec">
+            <h2 class="head">MY SKILLS</h2>
+            <p class="para">I am a good Programmer</p>
+    </section>
+    <section class="se">
+        <article>
+            <h2>C/C++</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam pariatur accusamus necessitatibus tempora officia, temporibus quisquam delectus numquam maiores expedita.</p>
+        </article>
+        <article>
+            <h2>HTML</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus itaque quia voluptate odit expedita officiis. Tenetur laudantium, dolores nihil placeat vitae del</p>
+        </article>
+        <article>
+            <h2>CSS</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum dolore officia nihil velit ipsa illo vel nulla assumenda deserunt aliquid, delectus ea, soluta, quidem expli</p>
+        </article>
+        <article>
+            <h2>JAVASCRIPT</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quod molestiae vero consequatur ea dolores iste minima omnis. Qui ipsa culpa magni, accusamus sunt consequatur</p>
+        </article>
+    </section>
+
+    <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+        } 
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 3000);
+}
+    </script>
+</body>
+</html>
