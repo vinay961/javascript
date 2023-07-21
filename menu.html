@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Menu</title>
+</head>
+<style>
+    body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+#mySearch{
+    width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+.row{
+    display: flex;
+}
+.left{
+    flex: 35%;
+    padding: 15px;
+}
+#myMenu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#myMenu li a{
+    text-decoration: none;
+    padding: 12px;
+    display: block;
+    color: black;
+}
+#myMenu li a:hover {
+  background-color: #eee;
+}
+.right{
+    flex: 65%;
+    padding: 15px;
+}
+.right h2{
+    padding: 10px 0;
+}
+</style>
+<body>
+    <div class="row">
+        <div class="left"  style="background-color:#bbb;">
+            <h2>Menu</h2>
+            <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search...">
+            <ul id="myMenu">
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JAVASCRIPT</a></li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">NODEJS</a></li>
+                <li><a href="#">EXPRESS</a></li>
+                <li><a href="#">REACT</a></li>
+                <li><a href="#">MONGODB</a></li>
+                <li><a href="#">MYSQL</a></li>
+            </ul>
+        </div>
+        <div class="right" style="background-color:#ddd;">
+            <h2>This Page contains</h2>
+            <p>Pollution is defined as the intermixing of harmful substances in the atmosphere that can adversely affect the Earth. The different types of pollution are; air, soil, water and noise pollution. <br> One of the causes of pollution is man’s intervention in nature. The increase in industries and urban livelihood is one reason for an increase in pollution. <br> Factories emit harmful gases that pollute the air. Waste is dumped in water and land causing; both water and soil pollution. These pollutants do not affect us at once but gradually. Drinking Polluted water can cause diseases like; diarrhoea, jaundice, etc. <br> Poor quality air or polluted air can cause severe respiratory ailments and affect our breathing. Noise pollution affects our hearing and can cause severe damage in the long run.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur id autem fugiat, fuga accusantium earum pariatur cum ratione officia distinctio!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti eligendi quae veritatis repellat, vel aperiam consequatur laudantium voluptates nam dolore?</p>
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+           var input, filter, ul, li, a, i;
+           input = document.getElementById("mySearch");
+           filter = input.value.toUpperCase();
+           ul = document.getElementById("myMenu");
+           li = ul.getElementsByTagName("li");
+           for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+               li[i].style.display = "";
+            } else {
+               li[i].style.display = "none";
+            }
+          }
+    }
+    </script>
+</body>
+</html>
